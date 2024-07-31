@@ -7,9 +7,11 @@ import { supabase } from "./../ExpensesTab/SupabaseConfig";
 import { MaterialIcons, Entypo } from '@expo/vector-icons';
 
 export default function Statistics() {
+
+    //category  list
     const [categoryList, setCategoryList] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [isEditing, setIsEditing] = useState(false);
+    const [isEditing, setIsEditing] = useState(false)
     const [currentCategory, setCurrentCategory] = useState(null);
     const [newName, setNewName] = useState('');
     const [newIcon, setNewIcon] = useState('');
@@ -23,7 +25,7 @@ export default function Statistics() {
         if (error) {
             console.error('Error fetching categories:', error);
         } else {
-            setCategoryList(data || []);
+            setCategoryList(data || [])
         }
     };
 
